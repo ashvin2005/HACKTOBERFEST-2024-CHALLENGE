@@ -7,8 +7,8 @@
     <title>Project Management Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -34,13 +34,15 @@
         <div class="main-content">
             <div class="header">
                 <nav class="navbar">
+                    <h1>Dashboard</h1>
+                    <button class="hamburger" onclick="toggleMenu()">☰</button>
                     <ul class="nav-links">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Projects</a></li>
-                      <li><a href="#">Inbox</a></li>
-                      <li><a href="#">Team</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">Team</a></li>
                     </ul>
-                  </nav>
+                </nav>
 
                 <div style="display: flex; align-items: center;">
                     <button class="upgrade-button">Upgrade</button>
@@ -73,6 +75,12 @@
             </div>
         </div>
     </div>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
